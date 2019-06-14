@@ -9,9 +9,12 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0",
     "register-service-worker": "^1.6.2",
     "vue": "^2.6.10",
-    "vue-router": "^3.0.3"
+    "vue-router": "^3.0.3",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.8.0",
@@ -25,28 +28,5 @@
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.10"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "@vue/prettier"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+  }
 }

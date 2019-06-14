@@ -1,5 +1,11 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6">
+          <div class="card">ads</div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
