@@ -1,11 +1,11 @@
 <template>
   <div class="orangeWashingDetailing">
     <div class="head">Who Is Orange Washing & Detailing</div>
-    <div class="body">
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-      <div class="button">
-        <img src="../assets/images/Group 106.png" class="button">
-      </div>
+    <div
+      class="body"
+    >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,</div>
+    <div class="button text-center">
+      <button class="btn btn-secondary">Know More About Us</button>
     </div>
   </div>
 </template>
@@ -37,9 +37,16 @@
   color: $color-1;
 }
 
-.orangeWashingDetailing .button {
-  width: 255px;
-  height: 70px;
-  object-fit: contain;
+.orangeWashingDetailing .btn-secondary {
+  background-color: $color-4;
+  border-color: transparent;
+  margin-top: 4%;
+  box-shadow: 0 15px 29px 0 rgba(242, 110, 34, 0.35);
+}
+
+@media screen and (min-width: 768px) {
+  .orangeWashingDetailing .button {
+    text-align: left !important;
+  }
 }
 </style>

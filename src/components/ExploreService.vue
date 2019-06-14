@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-4 col-card" v-for="card in cards">
+      <div class="col-6 col-md-4 col-card" v-for="card in cards">
         <div class="card">
           <img class="card-img-top" :src="'/img/' + card.image" alt="Card image cap">
           <div class="card-body">
@@ -89,7 +89,7 @@ export default {
 }
 
 .exploreService .body {
-  padding: 0 15%;
+  padding: 0 15% 5%;
   font-family: Helvetica;
   font-size: 16px;
   font-weight: normal;
@@ -127,7 +127,6 @@ export default {
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
-  line-height: 2.56;
   letter-spacing: normal;
   text-align: left;
   color: $color-3;
@@ -139,7 +138,6 @@ export default {
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.57;
   letter-spacing: normal;
   text-align: left;
   color: $color-2;

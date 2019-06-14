@@ -2,15 +2,18 @@
   <div id="app">
     <navbar/>
     <router-view/>
+    <footerapp/>
   </div>
 </template>
 
 <script>
 import NavBar from "@/components/NavBar.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   components: {
-    navbar: NavBar
+    navbar: NavBar,
+    footerapp: Footer
   }
 };
 </script>
@@ -25,6 +28,6 @@ body {
 }
 
 .container-fluid {
-  padding: 0;
+  margin: 0;
 }
 </style>
