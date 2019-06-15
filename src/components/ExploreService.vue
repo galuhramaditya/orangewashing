@@ -15,7 +15,11 @@
     <div class="row">
       <div class="col-6 col-md-4 col-card" v-for="card in cards">
         <div class="card">
-          <img class="card-img-top" :src="'/img/' + card.image" alt="Card image cap">
+          <img
+            class="card-img-top"
+            :src="require('../assets/images/' + card.image)"
+            alt="Card image cap"
+          >
           <div class="card-body">
             <div class="card-title">{{card.title}}</div>
             <div class="card-text">{{card.subtitle}}</div>
@@ -74,11 +78,9 @@ export default {
 
 
 <style lang="scss">
-@import "../assets/scss/color.scss";
-
 .exploreService .head {
   font-family: "Montserrat";
-  font-size: 36px;
+  font-size: $title;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -89,9 +91,9 @@ export default {
 }
 
 .exploreService .body {
-  padding: 0 15% 5%;
+  padding: 0 25% 5%;
   font-family: Helvetica;
-  font-size: 16px;
+  font-size: $subtitle;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;

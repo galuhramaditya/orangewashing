@@ -11,11 +11,9 @@
 </template>
 
 <style lang="scss">
-@import "../assets/scss/color.scss";
-
 .orangeWashingDetailing .head {
   font-family: Georgia;
-  font-size: 36px;
+  font-size: $title;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -27,7 +25,7 @@
 
 .orangeWashingDetailing .body {
   font-family: Helvetica;
-  font-size: 16px;
+  font-size: $subtitle;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;

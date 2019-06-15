@@ -9,6 +9,9 @@
 <script>
 import NavBar from "@/components/NavBar.vue";
 import Footer from "@/components/Footer.vue";
+import "./assets/js/jquery.min";
+import "./assets/js/bootstrap.min";
+import "./assets/js/lodash";
 
 export default {
   components: {
@@ -20,11 +23,11 @@ export default {
 
 <style lang="scss">
 @import "./assets/css/bootstrap.min.css";
-@import "./assets/scss/color.scss";
 
 html,
 body {
   background-color: $primary;
+  overflow-x: hidden;
 }
 
 .container-fluid {

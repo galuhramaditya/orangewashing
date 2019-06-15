@@ -48,8 +48,6 @@
 </template>
 
 <style lang="scss">
-@import "../assets/scss/color.scss";
-
 .footer {
   border: solid 1px $color-9;
   background-color: $color-7;
@@ -117,7 +115,7 @@
 .footer .copyright {
   opacity: 0.6;
   font-family: Muli;
-  font-size: 14px;
+  font-size: $subtitle;
   margin-bottom: 3%;
   font-weight: normal;
   font-style: normal;

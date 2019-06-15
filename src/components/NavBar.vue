@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-md navbar-dark top-jumbotron">
     <a class="navbar-brand" href="/">
       <img src="../assets/images/Image 3.png">
     </a>
@@ -36,4 +36,50 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.navbar {
+  position: fixed;
+  z-index: 99999999;
+  width: 100%;
+}
+
+.navbar .nav-link {
+  text-align: center;
+}
+
+.navbar.top-jumbotron {
+  position: absolute;
+  padding: 5%;
+}
+
+.navbar.top-jumbotron .navbar-nav {
+  width: 100%;
+}
+
+.navbar.top-jumbotron .nav-item {
+  margin: 0 3%;
+}
+.navbar.top-jumbotron .nav-link {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  opacity: 0.9;
+  color: $primary !important;
+}
+
+.navbar.top-jumbotron .active {
+  opacity: 1;
+  font-weight: 600;
+}
+
+.navbar.top-jumbotron .navbar-brand {
+  margin-right: 5%;
+}
+
+.navbar.top-jumbotron button {
+  color: $primary;
+}
 </style>
