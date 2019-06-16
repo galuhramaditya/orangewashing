@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .detailingService .head {
   font-family: Georgia;
   font-size: $title;

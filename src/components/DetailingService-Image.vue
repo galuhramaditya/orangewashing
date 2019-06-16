@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .detailingService-image .col-6 {
   padding: 0;
 }

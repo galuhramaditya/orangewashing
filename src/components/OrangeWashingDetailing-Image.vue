@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .orangeWashingDetailing-image .car {
   width: 100%;
   border-radius: 13% 0;

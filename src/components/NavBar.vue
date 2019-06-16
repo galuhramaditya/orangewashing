@@ -34,12 +34,14 @@
   </nav>
 </template>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+
+<style lang="scss" scoped>
 .navbar {
-  position: fixed;
-  z-index: 99999999;
+  position: fixed !important;
+  z-index: 9;
   width: 100%;
+  transition: 0.3s;
+  box-shadow: 0px 0px 20px 0px $color-5;
 }
 
 .navbar .nav-link {
@@ -47,7 +49,8 @@
 }
 
 .navbar.top-jumbotron {
-  position: absolute;
+  box-shadow: 0px 0px;
+  position: absolute !important;
   padding: 5%;
 }
 
@@ -61,12 +64,14 @@
 .navbar.top-jumbotron .nav-link {
   font-family: Montserrat;
   font-size: 16px;
-  font-weight: 600;
+  text-shadow: 0px 1px 2px $color-5;
+  font-weight: 900;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.19;
   letter-spacing: normal;
   opacity: 0.9;
+  transition: 0.3s;
   color: $primary !important;
 }
 
@@ -79,7 +84,16 @@
   margin-right: 5%;
 }
 
+.navbar.top-jumbotron button.collapsed {
+  box-shadow: 0px 0px 3px 1px $color-5;
+}
+
 .navbar.top-jumbotron button {
-  color: $primary;
+  box-shadow: 0px 0px 3px 3px $color-5;
+}
+
+.navbar.top-jumbotron .show .nav-link {
+  text-shadow: 3px 3px 3px $color-5;
+  font-size: 25px;
 }
 </style>

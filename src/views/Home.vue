@@ -1,8 +1,8 @@
 <template>
   <div class="home">
-    <div class="container-fluid">
+    <div class="container-fluid widget-jumbotron">
       <div class="row">
-        <div class="col-md-12 widget-jumbotron">
+        <div class="col-md-12">
           <Jumbotron/>
         </div>
       </div>
@@ -24,9 +24,11 @@
           <DetailingService/>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12 widget-card">
-          <ExploreService/>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 widget-card">
+            <ExploreService/>
+          </div>
         </div>
       </div>
       <div class="row">
@@ -35,6 +37,7 @@
         </div>
       </div>
     </div>
+    <FooterApp/>
   </div>
 </template>
 
@@ -47,6 +50,7 @@ import OrangeWashingDetailingImage from "@/components/OrangeWashingDetailing-Ima
 import ExploreService from "@/components/ExploreService.vue";
 import GetLastUpdate from "@/components/GetLastUpdate.vue";
 import Jumbotron from "@/components/Jumbotron.vue";
+import FooterApp from "@/components/Footer.vue";
 
 export default {
   name: "home",
@@ -57,9 +61,11 @@ export default {
     OrangeWashingDetailing,
     OrangeWashingDetailingImage,
     ExploreService,
-    GetLastUpdate
+    GetLastUpdate,
+    FooterApp
   }
 };
+
 $(document).scroll(function() {
   if ($("html, body").scrollTop() > $(".widget-jumbotron").height() - 50) {
     $(".navbar").addClass("bg-light");
@@ -74,12 +80,17 @@ $(document).scroll(function() {
   }
 });
 
-// $(".top-jumbotron").toggle(function() {
-//   console.log("asd");
-// });
-// if ($(".navbar-collapse").hasClass("show")) {
-//   console.log("asd");
-// }
+$(document).ready(function() {
+  var blur = true;
+  $(".navbar.top-jumbotron button").click(function() {
+    blur = !blur;
+    if (!blur) {
+      $(".jumbotron-header").addClass("blur");
+    } else {
+      $(".jumbotron-header").removeClass("blur");
+    }
+  });
+});
 </script>
 
 <style lang="scss">
@@ -107,11 +118,20 @@ $(document).scroll(function() {
   padding-bottom: 5%;
 }
 
+.home .widget-jumbotron > .row {
+  margin: 0;
+  width: 100%;
+}
+
+.home .widget-jumbotron > .row > [class*="col-"] {
+  padding: 0;
+}
+
 .home .widget-card {
   padding-top: 10%;
 }
 
-.container-fluid {
-  padding: 0;
+.home .widget-last-update {
+  padding: 10% 0;
 }
 </style>

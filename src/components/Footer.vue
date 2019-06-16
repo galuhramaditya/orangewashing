@@ -47,7 +47,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .footer {
   border: solid 1px $color-9;
   background-color: $color-7;

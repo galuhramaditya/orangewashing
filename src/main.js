@@ -6,6 +6,8 @@ import "./registerServiceWorker";
 
 Vue.config.productionTip = false;
 
+window.api_url = "http://api.orangewashing.loc";
+
 new Vue({
   router,
   store,

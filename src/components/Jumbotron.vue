@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .jumbotron-header {
   vertical-align: middle;
   text-align: center;
@@ -18,6 +18,11 @@
   background: url(../assets/images/jumbotron.png);
   background-attachment: fixed;
   border-radius: 0;
+  transition: 0.3s;
+}
+
+.jumbotron-header.blur {
+  filter: blur(5px);
 }
 
 .jumbotron-header .title {
