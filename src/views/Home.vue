@@ -1,7 +1,5 @@
 <template>
-  <div class="home">
-    <navbar/>
-
+  <BaseLayout>
     <div class="container-fluid widget-jumbotron">
       <div class="row">
         <div class="col-md-12">
@@ -39,13 +37,10 @@
         </div>
       </div>
     </div>
-    <FooterApp/>
-  </div>
+  </BaseLayout>
 </template>
 
-<script>
-// @ is an alias to /src
-import NavBar from "@/components/NavBar.vue";
+<script scoped>
 import DetailingService from "@/components/DetailingService.vue";
 import DetailingServiceImage from "@/components/DetailingService-Image.vue";
 import OrangeWashingDetailing from "@/components/OrangeWashingDetailing.vue";
@@ -53,20 +48,18 @@ import OrangeWashingDetailingImage from "@/components/OrangeWashingDetailing-Ima
 import ExploreService from "@/components/ExploreService.vue";
 import GetLastUpdate from "@/components/GetLastUpdate.vue";
 import Jumbotron from "@/components/Jumbotron.vue";
-import FooterApp from "@/components/Footer.vue";
+import BaseLayout from "@/layouts/Base.vue";
 
 export default {
-  name: "home",
   components: {
-    navbar: NavBar,
+    BaseLayout,
     Jumbotron,
     DetailingServiceImage,
     DetailingService,
     OrangeWashingDetailing,
     OrangeWashingDetailingImage,
     ExploreService,
-    GetLastUpdate,
-    FooterApp
+    GetLastUpdate
   }
 };
 
@@ -89,53 +82,53 @@ $(document).ready(function() {
   $(".navbar.top-jumbotron button").click(function() {
     blur = !blur;
     if (!blur) {
-      $(".jumbotron-header").addClass("blur");
+      $(".container").addClass("blur");
     } else {
-      $(".jumbotron-header").removeClass("blur");
+      $(".container").removeClass("blur");
     }
   });
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @media screen and (max-width: 767px) {
-  .home .container [class*="widget-"] {
+  .container [class*="widget-"] {
     padding-top: 10%;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .home .widget-top-right {
+  .widget-top-right {
     padding-left: 5%;
   }
 
-  .home .widget-top-right {
+  .widget-top-right {
     padding-bottom: 5%;
   }
 
-  .home .widget-bottom-left {
+  .widget-bottom-left {
     padding-top: 15%;
   }
 }
 
-.home .widget-jumbotron {
+.widget-jumbotron {
   padding-bottom: 5%;
 }
 
-.home .widget-jumbotron > .row {
+.widget-jumbotron > .row {
   margin: 0;
   width: 100%;
 }
 
-.home .widget-jumbotron > .row > [class*="col-"] {
+.widget-jumbotron > .row > [class*="col-"] {
   padding: 0;
 }
 
-.home .widget-card {
+.widget-card {
   padding-top: 10%;
 }
 
-.home .widget-last-update {
+.widget-last-update {
   padding: 10% 0;
 }
 </style>

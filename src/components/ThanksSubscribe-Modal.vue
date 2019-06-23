@@ -1,5 +1,5 @@
 <template>
-  <div class="modal thankSubscribe-modal" tabindex="-1" role="dialog">
+  <div class="modal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-body text-center">
@@ -54,22 +54,22 @@ export default {
 
 <style lang="scss" scoped>
 @media screen and (min-width: 576px) {
-  .thankSubscribe-modal .modal-dialog {
+  .modal-dialog {
     max-width: 80%;
   }
 }
 
-.thankSubscribe-modal .image img {
+.image img {
   width: 300px;
 }
 
 @media screen and (max-width: 575px) {
-  .thankSubscribe-modal .image img {
+  .image img {
     width: 80%;
   }
 }
 
-.thankSubscribe-modal .title {
+.title {
   margin-top: 3%;
   font-family: Georgia;
   font-size: 40px;
@@ -81,7 +81,7 @@ export default {
   color: #000000;
 }
 
-.thankSubscribe-modal .subtitle {
+.subtitle {
   font-family: Georgia;
   font-size: 16px;
   font-weight: bold;
@@ -91,7 +91,7 @@ export default {
   color: #000000;
 }
 
-.thankSubscribe-modal .info {
+.info {
   margin: 2% 0;
   font-family: Helvetica;
   font-size: 14px;
@@ -103,11 +103,11 @@ export default {
   color: $color-1;
 }
 
-.thankSubscribe-modal .done {
+.done {
   margin-bottom: 3%;
 }
 
-.thankSubscribe-modal .done .btn {
+.done .btn {
   padding: 1% 5%;
   border-radius: 20px;
   border: solid 2px $color-4;

@@ -1,5 +1,5 @@
 <template>
-  <div class="detailingService">
+  <div class="row">
     <div class="head">{{ head }}</div>
     <div class="body">{{ body }}</div>
   </div>
@@ -19,7 +19,7 @@ export default {
 
 
 <style lang="scss" scoped>
-.detailingService .head {
+.head {
   font-family: Georgia;
   font-size: $title;
   font-weight: bold;
@@ -31,7 +31,7 @@ export default {
   color: $color-3;
 }
 
-.detailingService .body {
+.body {
   font-family: Helvetica;
   font-size: $subtitle;
   font-weight: normal;

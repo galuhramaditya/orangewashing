@@ -1,5 +1,5 @@
 <template>
-  <div class="exploreService">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-12">
         <div class="head">{{ head }}</div>
@@ -79,8 +79,8 @@ export default {
 </script>
 
 
-<style lang="scss">
-.exploreService .head {
+<style lang="scss" scoped>
+.head {
   font-family: "Montserrat";
   font-size: $title;
   font-weight: bold;
@@ -92,7 +92,7 @@ export default {
   color: $color-3;
 }
 
-.exploreService .body {
+.body {
   padding: 0 25% 5%;
   font-family: Helvetica;
   font-size: $subtitle;
@@ -105,27 +105,27 @@ export default {
   color: $color-2;
 }
 
-.exploreService .btn-secondary {
+.btn-secondary {
   background-color: $color-4;
   border-color: transparent;
   box-shadow: 0 15px 29px 0 rgba(242, 110, 34, 0.35);
 }
 
-.exploreService .col-card {
+.col-card {
   margin-bottom: 53.4px;
 }
 
-.exploreService .card {
+.card {
   border-radius: 13px;
   border-color: transparent;
   box-shadow: 0 17px 16px 0 rgba(235, 241, 245, 0.55);
 }
 
-.exploreService .card img {
+.card img {
   object-fit: contain;
 }
 
-.exploreService .card .card-title {
+.card .card-title {
   font-family: Georgia;
   font-size: 18px;
   font-weight: bold;
@@ -136,7 +136,7 @@ export default {
   color: $color-3;
 }
 
-.exploreService .card .card-text {
+.card .card-text {
   font-family: Helvetica;
   font-size: 14px;
   font-weight: normal;

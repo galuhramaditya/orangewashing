@@ -1,8 +1,8 @@
 <template>
   <nav class="navbar navbar-expand-md navbar-dark top-jumbotron">
-    <a class="navbar-brand" href="/">
+    <router-link class="navbar-brand" to="/">
       <img :src="require('@/assets/images/' + logo)">
-    </a>
+    </router-link>
     <button
       class="navbar-toggler"
       type="button"

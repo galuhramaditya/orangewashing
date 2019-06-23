@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <navbar/>
-    <div class="page_404">
+    <div class="container-fluid">
       <div class="container">
         <div class="row">
           <div class="col-md-6 right">
@@ -10,7 +10,7 @@
           <div class="col-md-6 order-md-first left">
             <div class="title">{{ title }}</div>
             <div class="subtitle">{{ subtitle }}</div>
-            <button class="btn btn-secondary">{{ button }}</button>
+            <router-link to="/" class="btn btn-secondary">{{ button }}</router-link>
           </div>
         </div>
       </div>
@@ -40,16 +40,16 @@ $(document).ready(function() {
   $(".navbar.top-jumbotron button").click(function() {
     blur = !blur;
     if (!blur) {
-      $(".page_404").addClass("blur");
+      $(".container-fluid").addClass("blur");
     } else {
-      $(".page_404").removeClass("blur");
+      $(".container-fluid").removeClass("blur");
     }
   });
 });
 </script>
 
 <style lang="scss" scoped>
-.page_404 {
+.container-fluid {
   background-color: $color-7;
   text-align: left !important;
   padding-top: 13%;
@@ -59,19 +59,19 @@ $(document).ready(function() {
   transition: 0.3s;
 }
 
-.page_404 img {
+.container-fluid img {
   width: 100%;
 }
 
-.page_404 .left {
+.container-fluid .left {
   padding-top: 5%;
 }
 
-.page_404.blur {
+.container-fluid.blur {
   filter: blur(5px);
 }
 
-.page_404 .title {
+.container-fluid .title {
   padding-bottom: 5%;
   font-family: Montserrat;
   font-weight: 600;
@@ -83,7 +83,7 @@ $(document).ready(function() {
   font-size: 200%;
 }
 
-.page_404 .subtitle {
+.container-fluid .subtitle {
   font-family: Georgia;
   font-size: 25px;
   font-weight: bold;
@@ -94,7 +94,7 @@ $(document).ready(function() {
   color: $primary;
 }
 
-.page_404 .btn {
+.container-fluid .btn {
   margin: 10% 0;
   padding: 3% 7%;
   border: 0;
@@ -102,31 +102,31 @@ $(document).ready(function() {
 }
 
 @media screen and (min-width: 768px) {
-  .page_404 .title {
+  .container-fluid .title {
     font-size: 50px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .page_404 .row {
+  .container-fluid .row {
     text-align: center;
   }
 
-  .page_404 .btn {
+  .container-fluid .btn {
     margin: 8% 0;
   }
 
-  .page_404 img {
+  .container-fluid img {
     padding-top: 15%;
     width: 80%;
   }
 
-  .page_404 .title {
+  .container-fluid .title {
     padding-bottom: 2%;
     font-size: 40px;
   }
 
-  .page_404 .subtitle {
+  .container-fluid .subtitle {
     font-size: 15px;
   }
 }

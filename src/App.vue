@@ -41,4 +41,8 @@ body,
   width: 100%;
   margin: 0;
 }
+
+.blur {
+  filter: blur(5px);
+}
 </style>

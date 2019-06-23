@@ -1,33 +1,29 @@
 <template>
-  <div>
-    <div class="getLastUpdate">
-      <div class="row">
-        <div class="col-12">
-          <div class="card">
-            <div class="card-body">
-              <div class="card-title">{{ caption }}</div>
-              <div class="card-text">
-                <form v-on:submit.prevent="subscribe()">
-                  <div class="input-group">
-                    <input
-                      type="email"
-                      name="email"
-                      class="form-control"
-                      required
-                      :placeholder="placeholder"
-                    >
-                    <div class="input-group-append">
-                      <button type="submit" class="input-group-text btn btn-secondary">
-                        <span>
-                          {{ button }}
-                          <i class="fa fa-send"></i>
-                        </span>
-                      </button>
-                    </div>
-                  </div>
-                </form>
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title">{{ caption }}</div>
+          <div class="card-text">
+            <form v-on:submit.prevent="subscribe()">
+              <div class="input-group">
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  required
+                  :placeholder="placeholder"
+                >
+                <div class="input-group-append">
+                  <button type="submit" class="input-group-text btn btn-secondary">
+                    <span>
+                      {{ button }}
+                      <i class="fa fa-send"></i>
+                    </span>
+                  </button>
+                </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -54,7 +50,7 @@ export default {
   },
   methods: {
     subscribe: function() {
-      var form = $(".getLastUpdate form");
+      var form = $(" form");
       var email = form.find("[name=email]");
       $.ajax({
         type: "post",
@@ -82,22 +78,18 @@ export default {
 </script>
 
 
-<style lang="scss">
-.getLastUpdate {
-  position: relative;
-}
-
-.getLastUpdate .card {
+<style lang="scss" scoped>
+.card {
   border-radius: 13px;
   border-color: transparent;
   box-shadow: 0 17px 16px 0 rgba(235, 241, 245, 0.55);
 }
 
-.getLastUpdate .card .card-body {
+.card .card-body {
   padding: 5% 20%;
 }
 
-.getLastUpdate .card .card-title {
+.card .card-title {
   margin-bottom: 8%;
   font-family: Georgia;
   font-size: $title;
@@ -110,7 +102,7 @@ export default {
   color: $color-3;
 }
 
-.getLastUpdate .card input {
+.card input {
   padding: 5%;
   min-width: 150px;
   background-color: $color-6;
@@ -118,7 +110,7 @@ export default {
   border-color: transparent;
 }
 
-.getLastUpdate .btn {
+.btn {
   background-color: $color-4;
   border-radius: 10px;
   padding: 0 15%;
@@ -134,18 +126,18 @@ export default {
   width: 100%;
 }
 
-.getLastUpdate .btn span {
+.btn span {
   width: 100%;
   text-align: center;
 }
 
 @media screen and (max-width: 767px) {
-  .getLastUpdate .card input {
+  .card input {
     border-radius: 0px;
     margin-bottom: 5%;
   }
 
-  .getLastUpdate .btn {
+  .btn {
     border-radius: 0px;
   }
 
@@ -153,12 +145,12 @@ export default {
     width: 100%;
   }
 
-  .getLastUpdate .card input {
+  .card input {
     text-align: center;
   }
 }
 
-.getLastUpdate .fa {
+.fa {
   padding-left: 5%;
 }
 </style>

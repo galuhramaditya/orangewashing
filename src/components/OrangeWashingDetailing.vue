@@ -1,5 +1,5 @@
 <template>
-  <div class="orangeWashingDetailing">
+  <div class="row">
     <div class="head">{{ head }}</div>
     <div class="body">{{ body }}</div>
     <div class="button text-center">
@@ -23,7 +23,7 @@ export default {
 
 
 <style lang="scss" scoped>
-.orangeWashingDetailing .head {
+.head {
   font-family: Georgia;
   font-size: $title;
   font-weight: bold;
@@ -35,7 +35,7 @@ export default {
   color: $color-3;
 }
 
-.orangeWashingDetailing .body {
+.body {
   font-family: Helvetica;
   font-size: $subtitle;
   font-weight: normal;
@@ -47,7 +47,7 @@ export default {
   color: $color-1;
 }
 
-.orangeWashingDetailing .btn-secondary {
+.btn-secondary {
   background-color: $color-4;
   border-color: transparent;
   margin-top: 4%;
@@ -55,7 +55,7 @@ export default {
 }
 
 @media screen and (min-width: 768px) {
-  .orangeWashingDetailing .button {
+  .button {
     text-align: left !important;
   }
 }

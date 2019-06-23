@@ -1,5 +1,5 @@
 <template>
-  <div class="jumbotron jumbotron-header">
+  <div class="jumbotron">
     <div class="container">
       <h1 class="title">{{ caption }}</h1>
       <button class="btn btn-secondary">{{ button }}</button>
@@ -20,21 +20,17 @@ export default {
 
 
 <style lang="scss" scoped>
-.jumbotron-header {
+.jumbotron {
   vertical-align: middle;
   text-align: center;
-  padding: 20% 0 10%;
+  padding: 35% 0 25%;
   background: url(../assets/images/jumbotron.png);
   background-attachment: fixed;
   border-radius: 0;
   transition: 0.3s;
 }
 
-.jumbotron-header.blur {
-  filter: blur(5px);
-}
-
-.jumbotron-header .title {
+.title {
   padding-bottom: 3%;
   font-family: Montserrat;
   font-weight: 600;
@@ -47,7 +43,7 @@ export default {
   font-size: 200%;
 }
 
-.jumbotron-header .btn {
+.btn {
   padding: 1% 5%;
   border-radius: 20px;
   border: solid 2px $primary;
@@ -55,7 +51,10 @@ export default {
 }
 
 @media screen and (min-width: 768px) {
-  .jumbotron-header .title {
+  .jumbotron {
+    padding: 20% 0 10%;
+  }
+  .title {
     padding-left: 20%;
     padding-right: 20%;
     font-size: 250%;

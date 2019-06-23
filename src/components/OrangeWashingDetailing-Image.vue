@@ -1,7 +1,5 @@
 <template>
-  <div class="orangeWashingDetailing-image">
-    <img :src="require('@/assets/images/' + image)" class="car">
-  </div>
+  <img :src="require('@/assets/images/' + image)">
 </template>
 
 <script>
@@ -14,7 +12,7 @@ export default {
 
 
 <style lang="scss" scoped>
-.orangeWashingDetailing-image .car {
+img {
   width: 100%;
   border-radius: 13% 0;
   clear: both;
@@ -22,7 +20,7 @@ export default {
 }
 
 @media screen and (min-width: 768px) {
-  .orangeWashingDetailing-image .car {
+  img {
     width: 90%;
   }
 }
