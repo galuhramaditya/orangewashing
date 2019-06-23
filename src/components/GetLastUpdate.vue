@@ -5,7 +5,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-body">
-              <div class="card-title">Want to get the latest Updates?</div>
+              <div class="card-title">{{ caption }}</div>
               <div class="card-text">
                 <form v-on:submit.prevent="subscribe()">
                   <div class="input-group">
@@ -19,7 +19,7 @@
                     <div class="input-group-append">
                       <button type="submit" class="input-group-text btn btn-secondary">
                         <span>
-                          Subscribe
+                          {{ button }}
                           <i class="fa fa-send"></i>
                         </span>
                       </button>
@@ -46,7 +46,11 @@ export default {
     Modal
   },
   data() {
-    return { placeholder: placeholder };
+    return {
+      placeholder: placeholder,
+      button: "Subscribe",
+      caption: "Want to get the latest Updates?"
+    };
   },
   methods: {
     subscribe: function() {

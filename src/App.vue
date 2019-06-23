@@ -1,22 +1,21 @@
 <template>
   <div id="app">
-    <navbar/>
     <router-view/>
   </div>
 </template>
 
 <script>
-import NavBar from "@/components/NavBar.vue";
 import "./assets/js/jquery.min";
 import "./assets/js/bootstrap.min";
 import "./assets/js/lodash";
-// import "./assets/js/jquery.nicescroll";
+import "./assets/js/jquery.nicescroll.min";
 
-export default {
-  components: {
-    navbar: NavBar
-  }
-};
+export default {};
+
+// $("body").niceScroll({
+//   cursorcolor: "#f26e22",
+//   cursorborder: "transparent"
+// });
 </script>
 
 <style lang="scss">

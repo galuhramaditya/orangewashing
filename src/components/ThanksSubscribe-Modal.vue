@@ -14,21 +14,21 @@
           </div>
           <div class="row image">
             <div class="col-12">
-              <img src="../assets/images/Group 480.png">
+              <img :src="require('@/assets/images/' + image)">
             </div>
           </div>
           <div class="row title">
-            <div class="col-12">Thank You !</div>
+            <div class="col-12">{{ title }}</div>
           </div>
           <div class="row subtitle">
-            <div class="col-12">For Subscribe</div>
+            <div class="col-12">{{ subtitle }}</div>
           </div>
           <div class="row info">
-            <div class="col-12">we only send emails about updated information on our website</div>
+            <div class="col-12">{{ content }}</div>
           </div>
           <div class="row done">
             <div class="col-12">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Done</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ button }}</button>
             </div>
           </div>
         </div>
@@ -36,6 +36,21 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      image: "Group 480.png",
+      title: "Thank You !",
+      subtitle: "For Subscribe",
+      content: "we only send emails about updated information on our website",
+      button: "Done"
+    };
+  }
+};
+</script>
+
 
 <style lang="scss" scoped>
 @media screen and (min-width: 576px) {

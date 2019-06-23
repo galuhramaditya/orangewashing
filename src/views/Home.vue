@@ -1,5 +1,7 @@
 <template>
   <div class="home">
+    <navbar/>
+
     <div class="container-fluid widget-jumbotron">
       <div class="row">
         <div class="col-md-12">
@@ -43,6 +45,7 @@
 
 <script>
 // @ is an alias to /src
+import NavBar from "@/components/NavBar.vue";
 import DetailingService from "@/components/DetailingService.vue";
 import DetailingServiceImage from "@/components/DetailingService-Image.vue";
 import OrangeWashingDetailing from "@/components/OrangeWashingDetailing.vue";
@@ -55,6 +58,7 @@ import FooterApp from "@/components/Footer.vue";
 export default {
   name: "home",
   components: {
+    navbar: NavBar,
     Jumbotron,
     DetailingServiceImage,
     DetailingService,

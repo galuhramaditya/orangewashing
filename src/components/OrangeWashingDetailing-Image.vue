@@ -1,8 +1,17 @@
 <template>
   <div class="orangeWashingDetailing-image">
-    <img src="../assets/images/jaifv4nk.png" class="car">
+    <img :src="require('@/assets/images/' + image)" class="car">
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return { image: "jaifv4nk.png" };
+  }
+};
+</script>
+
 
 <style lang="scss" scoped>
 .orangeWashingDetailing-image .car {

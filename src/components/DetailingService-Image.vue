@@ -2,16 +2,30 @@
   <div class="detailingService-image">
     <div class="row">
       <div class="col-6 text-right">
-        <img src="../assets/images/a8yt8ici.png" class="top-left">
-        <img src="../assets/images/2mou6w3x.png" class="bottom-left">
+        <img :src="require('@/assets/images/' + top_left)" class="top-left">
+        <img :src="require('@/assets/images/' + bottom_left)" class="bottom-left">
       </div>
       <div class="col-6 text-left">
-        <img src="../assets/images/qv3g3gmi.png" class="top-right">
-        <img src="../assets/images/o9kwrr26.png" class="bottom-right">
+        <img :src="require('@/assets/images/' + top_right)" class="top-right">
+        <img :src="require('@/assets/images/' + bottom_right)" class="bottom-right">
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      top_left: "a8yt8ici.png",
+      bottom_left: "2mou6w3x.png",
+      top_right: "qv3g3gmi.png",
+      bottom_right: "o9kwrr26.png"
+    };
+  }
+};
+</script>
+
 
 <style lang="scss" scoped>
 .detailingService-image .col-6 {

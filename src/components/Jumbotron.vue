@@ -1,14 +1,23 @@
 <template>
   <div class="jumbotron jumbotron-header">
     <div class="container">
-      <h1 class="title">
-        WE LOVE YOUR CAR
-        THE SAME AS YOU DO
-      </h1>
-      <button class="btn btn-secondary">Contact Us Now</button>
+      <h1 class="title">{{ caption }}</h1>
+      <button class="btn btn-secondary">{{ button }}</button>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      caption: "WE LOVE YOUR CAR THE SAME AS YOU DO",
+      button: "Contact Us Now"
+    };
+  }
+};
+</script>
+
 
 <style lang="scss" scoped>
 .jumbotron-header {

@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-md navbar-dark top-jumbotron">
     <a class="navbar-brand" href="/">
-      <img src="../assets/images/Image 3.png">
+      <img :src="require('@/assets/images/' + logo)">
     </a>
     <button
       class="navbar-toggler"
@@ -17,22 +17,41 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <router-link to="/" class="nav-link">Home</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/about" class="nav-link">About Us</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/service" class="nav-link">Our Service</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/contact" class="nav-link">Contact Us</router-link>
+        <li class="nav-item" v-for="menu in menus">
+          <router-link :to="menu.link" class="nav-link">{{ menu.title }}</router-link>
         </li>
       </ul>
     </div>
   </nav>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      logo: "Image 3.png",
+      menus: [
+        {
+          title: "Home",
+          link: "/"
+        },
+        {
+          title: "About Us",
+          link: "/about"
+        },
+        {
+          title: "Our Service",
+          link: "/service"
+        },
+        {
+          title: "Contact Us",
+          link: "/contact"
+        }
+      ]
+    };
+  }
+};
+</script>
 
 
 <style lang="scss" scoped>
@@ -95,5 +114,11 @@
 .navbar.top-jumbotron .show .nav-link {
   text-shadow: 3px 3px 3px $color-5;
   font-size: 25px;
+}
+
+@media screen and (max-width: 767px) {
+  img {
+    width: 75%;
+  }
 }
 </style>

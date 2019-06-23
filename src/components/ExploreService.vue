@@ -2,14 +2,12 @@
   <div class="exploreService">
     <div class="row">
       <div class="col-12">
-        <div class="head">Explore Our Services</div>
+        <div class="head">{{ head }}</div>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <div
-          class="body"
-        >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</div>
+        <div class="body">{{ body }}</div>
       </div>
     </div>
     <div class="row">
@@ -17,19 +15,19 @@
         <div class="card">
           <img
             class="card-img-top"
-            :src="require('../assets/images/' + card.image)"
+            :src="require('@/assets/images/' + card.image)"
             alt="Card image cap"
           >
           <div class="card-body">
-            <div class="card-title">{{card.title}}</div>
-            <div class="card-text">{{card.subtitle}}</div>
+            <div class="card-title">{{ card.title }}</div>
+            <div class="card-text">{{ card.subtitle }}</div>
           </div>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-12 text-center">
-        <button class="btn btn-secondary">Explore More</button>
+        <button class="btn btn-secondary">{{ more }}</button>
       </div>
     </div>
   </div>
@@ -39,6 +37,10 @@
 export default {
   data() {
     return {
+      head: "Explore Our Services",
+      body:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.",
+      more: "Explore More",
       cards: [
         {
           image: "eaters-collective-172257-unsplash.png",

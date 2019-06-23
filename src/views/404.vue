@@ -1,14 +1,17 @@
 <template>
-  <div class="page_404">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 right">
-          <img src="../assets/images/Group 479.png" alt="404">
-        </div>
-        <div class="col-md-6 order-md-first left">
-          <div class="title">Oops !</div>
-          <div class="subtitle">We could not find the page you were looking for</div>
-          <button class="btn btn-secondary">Go Back Home</button>
+  <div class="page">
+    <navbar/>
+    <div class="page_404">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 right">
+            <img :src="require('@/assets/images/' + image)" alt="404">
+          </div>
+          <div class="col-md-6 order-md-first left">
+            <div class="title">{{ title }}</div>
+            <div class="subtitle">{{ subtitle }}</div>
+            <button class="btn btn-secondary">{{ button }}</button>
+          </div>
         </div>
       </div>
     </div>
@@ -16,6 +19,22 @@
 </template>
 
 <script scoped>
+import NavBar from "@/components/NavBar.vue";
+
+export default {
+  components: {
+    navbar: NavBar
+  },
+  data() {
+    return {
+      image: "Group 479.png",
+      title: "Oops !",
+      subtitle: "We could not find the page you were looking for",
+      button: "Go Back Home"
+    };
+  }
+};
+
 $(document).ready(function() {
   var blur = true;
   $(".navbar.top-jumbotron button").click(function() {
