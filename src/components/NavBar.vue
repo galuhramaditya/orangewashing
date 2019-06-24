@@ -82,13 +82,8 @@ export default {
 }
 .navbar.top-jumbotron .nav-link {
   font-family: Montserrat;
-  font-size: 16px;
   text-shadow: 0px 1px 2px $color-5;
   font-weight: 900;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.19;
-  letter-spacing: normal;
   opacity: 0.9;
   transition: 0.3s;
   color: $primary !important;
@@ -113,7 +108,6 @@ export default {
 
 .navbar.top-jumbotron .show .nav-link {
   text-shadow: 3px 3px 3px $color-5;
-  font-size: 25px;
 }
 
 @media ($sm-max) {

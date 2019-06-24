@@ -2,27 +2,27 @@
   <div class="footer container-fluid">
     <div class="row content">
       <div class="col-sm-4">
-        <div class="head">{{ left.head }}</div>
-        <div class="body">{{left.body}}</div>
+        <div class="head text-sm">{{ left.head }}</div>
+        <div class="body text-xs">{{left.body}}</div>
       </div>
       <div class="col-sm-4">
-        <div class="head">{{ center.head }}</div>
-        <div class="body">
+        <div class="head text-sm">{{ center.head }}</div>
+        <div class="body text-xs">
           <ul>
             <li v-for="body in center.body">{{ body }}</li>
           </ul>
         </div>
       </div>
       <div class="col-sm-4">
-        <div class="head">{{ right.head }}</div>
-        <div class="body">
+        <div class="head text-sm">{{ right.head }}</div>
+        <div class="body text-xxs">
           <ul>
             <li>
-              <i class="fa" v-for="top in right.body.top" :class="top"></i>
+              <i class="fa text-xl" v-for="top in right.body.top" :class="top"></i>
             </li>
             <li>
               <div class="map">
-                <i class="fa" :class="right.body.bottom.logo"></i>
+                <i class="fa text-xl" :class="right.body.bottom.logo"></i>
                 <div>{{ right.body.bottom.content }}</div>
               </div>
             </li>
@@ -31,7 +31,7 @@
       </div>
     </div>
     <div class="row copyright">
-      <div class="col-12 text-center">{{ copyright }}</div>
+      <div class="col-12 text-center text-xs">{{ copyright }}</div>
     </div>
   </div>
 </template>
@@ -85,30 +85,19 @@ export default {
 
 .footer .head {
   font-family: Helvetica;
-  font-size: 16px;
   font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  letter-spacing: normal;
   margin-bottom: 3%;
-  text-align: left;
 }
 
 @media ($sm-min) {
   .footer .head {
-    margin-bottom: 10%;
+    margin-bottom: 7%;
   }
 }
 
 .footer .body {
   font-family: Helvetica;
-  font-size: 12px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
   line-height: 1.21;
-  letter-spacing: normal;
-  text-align: left;
 }
 
 .footer .body ul {
@@ -121,7 +110,6 @@ export default {
 }
 
 .footer .body ul li .fa {
-  font-size: 300%;
   margin-right: 15px;
 }
 
@@ -130,19 +118,19 @@ export default {
 }
 
 .footer .body ul li .map div {
-  margin-left: 55px;
+  margin-left: 50px;
+}
+
+@media ($sm-max) {
+  .footer .body ul li .map div {
+    margin-left: 40px;
+  }
 }
 
 .footer .copyright {
   opacity: 0.6;
   font-family: Muli;
-  font-size: $subtitle;
   margin-bottom: 3%;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  letter-spacing: normal;
-  text-align: center;
   color: $color-8;
 }
 </style>

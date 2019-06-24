@@ -1,5 +1,5 @@
 <template>
-  <div class="jumbotron">
+  <div class="jumbotron text-center">
     <div class="container">
       <h1 class="title text-xxl">{{ caption }}</h1>
       <button class="btn btn-secondary">{{ button }}</button>
@@ -21,8 +21,6 @@ export default {
 
 <style lang="scss" scoped>
 .jumbotron {
-  vertical-align: middle;
-  text-align: center;
   padding: 35% 0 25%;
   background: url(../assets/images/jumbotron.png);
   background-attachment: fixed;

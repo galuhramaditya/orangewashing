@@ -18,13 +18,13 @@
             </div>
           </div>
           <div class="row title">
-            <div class="col-12">{{ title }}</div>
+            <div class="col-12 text-xxl">{{ title }}</div>
           </div>
           <div class="row subtitle">
-            <div class="col-12">{{ subtitle }}</div>
+            <div class="col-12 text-sm">{{ subtitle }}</div>
           </div>
           <div class="row info">
-            <div class="col-12">{{ content }}</div>
+            <div class="col-12 text-xs">{{ content }}</div>
           </div>
           <div class="row done">
             <div class="col-12">
@@ -72,34 +72,20 @@ export default {
 .title {
   margin-top: 3%;
   font-family: Georgia;
-  font-size: 40px;
   font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
   line-height: 1.18;
-  letter-spacing: normal;
   color: #000000;
 }
 
 .subtitle {
   font-family: Georgia;
-  font-size: 16px;
   font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  letter-spacing: normal;
   color: #000000;
 }
 
 .info {
   margin: 2% 0;
   font-family: Helvetica;
-  font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.63;
-  letter-spacing: normal;
   color: $color-1;
 }
 

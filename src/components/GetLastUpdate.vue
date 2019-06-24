@@ -3,7 +3,7 @@
     <div class="col-12">
       <div class="card">
         <div class="card-body">
-          <div class="card-title">{{ caption }}</div>
+          <div class="card-title text-center text-xl">{{ caption }}</div>
           <div class="card-text">
             <form v-on:submit.prevent="subscribe()">
               <div class="input-group">
@@ -14,8 +14,8 @@
                   required
                   :placeholder="placeholder"
                 >
-                <div class="input-group-append">
-                  <button type="submit" class="input-group-text btn btn-secondary">
+                <div class="input-group-append text-center">
+                  <button type="submit" class="input-group-text btn btn-secondary text-sm">
                     <span>
                       {{ button }}
                       <i class="fa fa-send"></i>
@@ -92,13 +92,7 @@ export default {
 .card .card-title {
   margin-bottom: 8%;
   font-family: Georgia;
-  font-size: $title;
   font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.28;
-  letter-spacing: normal;
-  text-align: center;
   color: $color-3;
 }
 
@@ -116,12 +110,7 @@ export default {
   padding: 0 15%;
   border-color: transparent;
   font-family: Helvetica;
-  font-size: 20px;
   font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.92;
-  letter-spacing: normal;
   color: $primary;
   width: 100%;
 }

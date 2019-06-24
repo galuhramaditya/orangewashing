@@ -8,8 +8,8 @@
             <img :src="require('@/assets/images/' + image)" alt="404">
           </div>
           <div class="col-md-6 order-md-first left">
-            <div class="title text-xxl">{{ title }}</div>
-            <div class="subtitle">{{ subtitle }}</div>
+            <div class="title text-xxl text-xxl">{{ title }}</div>
+            <div class="subtitle text-md">{{ subtitle }}</div>
             <router-link to="/" class="btn btn-secondary">{{ button }}</router-link>
           </div>
         </div>
@@ -75,21 +75,14 @@ $(document).ready(function() {
   padding-bottom: 5%;
   font-family: Montserrat;
   font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
   line-height: 1.18;
-  letter-spacing: normal;
   color: $primary;
 }
 
 .container-fluid .subtitle {
   font-family: Georgia;
-  font-size: 25px;
   font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
   line-height: 1.28;
-  letter-spacing: normal;
   color: $primary;
 }
 
@@ -116,11 +109,6 @@ $(document).ready(function() {
 
   .container-fluid .title {
     padding-bottom: 2%;
-    font-size: 40px;
-  }
-
-  .container-fluid .subtitle {
-    font-size: 15px;
   }
 }
 </style>

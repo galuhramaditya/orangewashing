@@ -1,7 +1,7 @@
 <template>
   <div class="row">
-    <div class="head">{{ head }}</div>
-    <div class="body">{{ body }}</div>
+    <div class="head text-xl">{{ head }}</div>
+    <div class="body text-sm">{{ body }}</div>
     <div class="button text-center">
       <button class="btn btn-secondary">{{button}}</button>
     </div>
@@ -25,25 +25,14 @@ export default {
 <style lang="scss" scoped>
 .head {
   font-family: Georgia;
-  font-size: $title;
   font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
   line-height: 1.28;
-  letter-spacing: normal;
-  text-align: left;
   color: $color-3;
 }
 
 .body {
   font-family: Helvetica;
-  font-size: $subtitle;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
   line-height: 1.63;
-  letter-spacing: normal;
-  text-align: left;
   color: $color-1;
 }
 
@@ -52,6 +41,12 @@ export default {
   border-color: transparent;
   margin-top: 4%;
   box-shadow: 0 15px 29px 0 rgba(242, 110, 34, 0.35);
+}
+
+@media ($sm-max) {
+  .row {
+    text-align: justify !important;
+  }
 }
 
 @media ($md-min) {

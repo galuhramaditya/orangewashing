@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row text-left">
     <div class="head text-xl">{{ head }}</div>
     <div class="body text-sm">{{ body }}</div>
   </div>
@@ -22,22 +22,19 @@ export default {
 .head {
   font-family: Georgia;
   font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
   line-height: 1.28;
-  letter-spacing: normal;
-  text-align: left;
   color: $color-3;
 }
 
 .body {
   font-family: Helvetica;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
   line-height: 1.63;
-  letter-spacing: normal;
-  text-align: left;
   color: $color-1;
+}
+
+@media ($sm-max) {
+  .row {
+    text-align: justify !important;
+  }
 }
 </style>

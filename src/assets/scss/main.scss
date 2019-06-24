@@ -31,8 +31,8 @@ $title: 32px;
 $text-media: xxs xs sm md lg xl xxl;
 $text-size: 12 14 17 20 25 32 40;
 $text-decrease-md: 1 2 3 4 5 6 7;
-$text-decrease-sm: 2 2 4 4 6 6 10;
-$text-decrease-xs: 3 3 4 6 9 9 15;
+$text-decrease-sm: 2 2 4 4 5 5 10;
+$text-decrease-xs: 3 3 5 6 9 9 15;
 
 @each $media in $text-media {
   $i: index($text-media, $media);

@@ -1,13 +1,13 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-12">
-        <div class="head">{{ head }}</div>
+      <div class="col-12 text-center">
+        <div class="head text-xl">{{ head }}</div>
       </div>
     </div>
     <div class="row">
-      <div class="col-12">
-        <div class="body">{{ body }}</div>
+      <div class="col-12 text-center">
+        <div class="body text-sm">{{ body }}</div>
       </div>
     </div>
     <div class="row">
@@ -19,8 +19,8 @@
             alt="Card image cap"
           >
           <div class="card-body">
-            <div class="card-title">{{ card.title }}</div>
-            <div class="card-text">{{ card.subtitle }}</div>
+            <div class="card-title text-md">{{ card.title }}</div>
+            <div class="card-text text-xs">{{ card.subtitle }}</div>
           </div>
         </div>
       </div>
@@ -82,26 +82,14 @@ export default {
 <style lang="scss" scoped>
 .head {
   font-family: "Montserrat";
-  font-size: $title;
   font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
   line-height: 1.28;
-  letter-spacing: normal;
-  text-align: center;
   color: $color-3;
 }
 
 .body {
   padding: 0 25% 5%;
   font-family: Helvetica;
-  font-size: $subtitle;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.63;
-  letter-spacing: normal;
-  text-align: center;
   color: $color-2;
 }
 
@@ -121,29 +109,14 @@ export default {
   box-shadow: 0 17px 16px 0 rgba(235, 241, 245, 0.55);
 }
 
-.card img {
-  object-fit: contain;
-}
-
 .card .card-title {
   font-family: Georgia;
-  font-size: 18px;
   font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  letter-spacing: normal;
-  text-align: left;
   color: $color-3;
 }
 
 .card .card-text {
   font-family: Helvetica;
-  font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  letter-spacing: normal;
-  text-align: left;
   color: $color-2;
 }
 </style>
