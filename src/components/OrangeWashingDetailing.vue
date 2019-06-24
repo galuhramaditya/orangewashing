@@ -1,9 +1,9 @@
 <template>
   <div class="row">
-    <div class="head text-xl">{{ head }}</div>
-    <div class="body text-sm">{{ body }}</div>
+    <div class="head text-navy text-xl">{{ head }}</div>
+    <div class="body text-darkgrey text-sm">{{ body }}</div>
     <div class="button text-center">
-      <button class="btn btn-secondary">{{button}}</button>
+      <button class="btn btn-primary">{{button}}</button>
     </div>
   </div>
 </template>
@@ -27,20 +27,11 @@ export default {
   font-family: Georgia;
   font-weight: bold;
   line-height: 1.28;
-  color: $color-3;
 }
 
 .body {
   font-family: Helvetica;
-  line-height: 1.63;
-  color: $color-1;
-}
-
-.btn-secondary {
-  background-color: $color-4;
-  border-color: transparent;
-  margin-top: 4%;
-  box-shadow: 0 15px 29px 0 rgba(242, 110, 34, 0.35);
+  margin: 4% 0;
 }
 
 @media ($sm-max) {

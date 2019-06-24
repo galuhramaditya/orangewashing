@@ -7,10 +7,10 @@
           <div class="col-md-6 right">
             <img :src="require('@/assets/images/' + image)" alt="404">
           </div>
-          <div class="col-md-6 order-md-first left">
+          <div class="col-md-6 order-md-first left text-white">
             <div class="title text-xxl text-xxl">{{ title }}</div>
             <div class="subtitle text-md">{{ subtitle }}</div>
-            <router-link to="/" class="btn btn-secondary">{{ button }}</router-link>
+            <router-link to="/" class="btn btn-primary btn-lg">{{ button }}</router-link>
           </div>
         </div>
       </div>
@@ -72,25 +72,14 @@ $(document).ready(function() {
 }
 
 .container-fluid .title {
-  padding-bottom: 5%;
   font-family: Montserrat;
   font-weight: 600;
-  line-height: 1.18;
-  color: $primary;
 }
 
 .container-fluid .subtitle {
   font-family: Georgia;
   font-weight: bold;
-  line-height: 1.28;
-  color: $primary;
-}
-
-.container-fluid .btn {
-  margin: 10% 0;
-  padding: 3% 7%;
-  border: 0;
-  background-color: $color-4;
+  margin: 5% 0;
 }
 
 @media ($sm-max) {

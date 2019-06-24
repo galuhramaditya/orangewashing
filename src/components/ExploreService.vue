@@ -2,12 +2,12 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 text-center">
-        <div class="head text-xl">{{ head }}</div>
+        <div class="head text-xl text-navy">{{ head }}</div>
       </div>
     </div>
     <div class="row">
       <div class="col-12 text-center">
-        <div class="body text-sm">{{ body }}</div>
+        <div class="body text-sm text-grey">{{ body }}</div>
       </div>
     </div>
     <div class="row">
@@ -19,15 +19,15 @@
             alt="Card image cap"
           >
           <div class="card-body">
-            <div class="card-title text-md">{{ card.title }}</div>
-            <div class="card-text text-xs">{{ card.subtitle }}</div>
+            <div class="card-title text-md text-navy">{{ card.title }}</div>
+            <div class="card-text text-xs text-grey">{{ card.subtitle }}</div>
           </div>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-12 text-center">
-        <button class="btn btn-secondary">{{ more }}</button>
+        <button class="btn btn-primary">{{ more }}</button>
       </div>
     </div>
   </div>
@@ -84,39 +84,23 @@ export default {
   font-family: "Montserrat";
   font-weight: bold;
   line-height: 1.28;
-  color: $color-3;
 }
 
 .body {
   padding: 0 25% 5%;
   font-family: Helvetica;
-  color: $color-2;
-}
-
-.btn-secondary {
-  background-color: $color-4;
-  border-color: transparent;
-  box-shadow: 0 15px 29px 0 rgba(242, 110, 34, 0.35);
 }
 
 .col-card {
   margin-bottom: 53.4px;
 }
 
-.card {
-  border-radius: 13px;
-  border-color: transparent;
-  box-shadow: 0 17px 16px 0 rgba(235, 241, 245, 0.55);
-}
-
 .card .card-title {
   font-family: Georgia;
   font-weight: bold;
-  color: $color-3;
 }
 
 .card .card-text {
   font-family: Helvetica;
-  color: $color-2;
 }
 </style>

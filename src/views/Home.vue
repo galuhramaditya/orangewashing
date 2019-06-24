@@ -7,6 +7,7 @@
         </div>
       </div>
     </div>
+
     <div class="container">
       <div class="row">
         <div class="col-md-6 widget-top-left">
@@ -16,6 +17,7 @@
           <OrangeWashingDetailing/>
         </div>
       </div>
+
       <div class="row">
         <div class="col-md-6 widget-bottom-right">
           <DetailingServiceImage/>
@@ -24,13 +26,13 @@
           <DetailingService/>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 widget-card">
-            <ExploreService/>
-          </div>
+
+      <div class="row">
+        <div class="widget-card">
+          <ExploreService/>
         </div>
       </div>
+
       <div class="row">
         <div class="col-12 widget-last-update">
           <GetLastUpdate/>
@@ -82,9 +84,9 @@ $(document).ready(function() {
   $(".navbar.top-jumbotron button").click(function() {
     blur = !blur;
     if (!blur) {
-      $(".container").addClass("blur");
+      $("[class*=widget-]").addClass("blur");
     } else {
-      $(".container").removeClass("blur");
+      $("[class*=widget-]").removeClass("blur");
     }
   });
 });

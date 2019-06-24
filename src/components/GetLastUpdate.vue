@@ -3,7 +3,7 @@
     <div class="col-12">
       <div class="card">
         <div class="card-body">
-          <div class="card-title text-center text-xl">{{ caption }}</div>
+          <div class="card-title text-navy text-center text-xl">{{ caption }}</div>
           <div class="card-text">
             <form v-on:submit.prevent="subscribe()">
               <div class="input-group">
@@ -15,7 +15,7 @@
                   :placeholder="placeholder"
                 >
                 <div class="input-group-append text-center">
-                  <button type="submit" class="input-group-text btn btn-secondary text-sm">
+                  <button type="submit" class="input-group-text btn btn-primary text-sm no-shadow">
                     <span>
                       {{ button }}
                       <i class="fa fa-send"></i>
@@ -79,12 +79,6 @@ export default {
 
 
 <style lang="scss" scoped>
-.card {
-  border-radius: 13px;
-  border-color: transparent;
-  box-shadow: 0 17px 16px 0 rgba(235, 241, 245, 0.55);
-}
-
 .card .card-body {
   padding: 5% 20%;
 }
@@ -93,25 +87,18 @@ export default {
   margin-bottom: 8%;
   font-family: Georgia;
   font-weight: bold;
-  color: $color-3;
 }
 
 .card input {
   padding: 5%;
-  min-width: 150px;
-  background-color: $color-6;
   border-radius: 10px;
   border-color: transparent;
 }
 
 .btn {
-  background-color: $color-4;
   border-radius: 10px;
-  padding: 0 15%;
-  border-color: transparent;
   font-family: Helvetica;
   font-weight: bold;
-  color: $primary;
   width: 100%;
 }
 
@@ -140,6 +127,6 @@ export default {
 }
 
 .fa {
-  padding-left: 5%;
+  padding-left: 5px;
 }
 </style>

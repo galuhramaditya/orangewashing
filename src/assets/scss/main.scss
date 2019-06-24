@@ -25,9 +25,6 @@ $sm-max: "(max-width: 767px)";
 $md-max: "(max-width: 991px)";
 $lg-max: "(max-width: 1199px)";
 
-$subtitle: 15px;
-$title: 32px;
-
 $text-media: xxs xs sm md lg xl xxl;
 $text-size: 12 14 17 20 25 32 40;
 $text-decrease-md: 1 2 3 4 5 6 7;
@@ -60,4 +57,76 @@ $text-decrease-xs: 3 3 5 6 9 9 15;
       font-size: (nth($text-size, $i) - nth($text-decrease-xs, $i)) + px;
     }
   }
+}
+
+.btn-primary,
+.btn-primary:focus {
+  color: $primary;
+  background-color: $color-4;
+  border-color: transparent;
+  box-shadow: 0 15px 29px 0 rgba(242, 110, 34, 0.35);
+}
+
+.btn-primary:hover {
+  background-color: #e9702b;
+  border-color: transparent;
+  box-shadow: 0 5px 15px 0 rgba(242, 110, 34, 0.35);
+}
+
+.btn-outline-secondary,
+.btn-outline-secondary:focus {
+  color: $primary;
+  border-color: $primary;
+}
+
+.btn-outline-secondary:hover {
+  background-color: transparent;
+  box-shadow: 0 5px 15px 0 black;
+}
+
+.no-shadow {
+  box-shadow: 0 0 !important;
+  text-shadow: 0 0 !important;
+}
+
+.text-orange {
+  color: $color-4;
+}
+
+.text-white {
+  color: $primary;
+}
+
+.text-navy {
+  color: $color-3;
+}
+
+.text-darkgrey {
+  color: $color-1;
+}
+
+.text-grey {
+  color: $color-2;
+}
+
+.bg-orange {
+  background-color: $color-4;
+}
+
+.bg-white {
+  background-color: $primary;
+}
+
+.bg-navy {
+  background-color: $color-3;
+}
+
+.bg-darknavy {
+  background-color: $color-7;
+}
+
+.card {
+  border-radius: 13px;
+  border-color: transparent;
+  box-shadow: 0 17px 16px 0 rgba(235, 241, 245, 0.55);
 }

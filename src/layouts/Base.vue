@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <navbar/>
-    <slot/>
+    <slot class="content"/>
     <footerapp/>
   </div>
 </template>

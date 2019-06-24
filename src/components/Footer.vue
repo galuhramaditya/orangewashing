@@ -1,5 +1,5 @@
 <template>
-  <div class="footer container-fluid">
+  <div class="footer container-fluid bg-darknavy text-white">
     <div class="row content">
       <div class="col-sm-4">
         <div class="head text-sm">{{ left.head }}</div>
@@ -71,8 +71,6 @@ export default {
 <style lang="scss" scoped>
 .footer {
   border: solid 1px $color-9;
-  background-color: $color-7;
-  color: $primary;
 }
 
 .footer .content {

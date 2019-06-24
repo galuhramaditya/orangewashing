@@ -82,16 +82,16 @@ export default {
 }
 .navbar.top-jumbotron .nav-link {
   font-family: Montserrat;
-  text-shadow: 0px 1px 2px $color-5;
-  font-weight: 900;
-  opacity: 0.9;
+  text-shadow: 0px 1px 5px $color-5;
+  font-weight: 600;
+  opacity: 0.75;
   transition: 0.3s;
   color: $primary !important;
 }
 
 .navbar.top-jumbotron .active {
   opacity: 1;
-  font-weight: 600;
+  font-weight: 900;
 }
 
 .navbar.top-jumbotron .navbar-brand {
@@ -99,11 +99,11 @@ export default {
 }
 
 .navbar.top-jumbotron button.collapsed {
-  box-shadow: 0px 0px 3px 1px $color-5;
+  box-shadow: 0px 0px 1px 1px $color-5;
 }
 
 .navbar.top-jumbotron button {
-  box-shadow: 0px 0px 3px 3px $color-5;
+  box-shadow: 0px 0px 1px 5px $color-5;
 }
 
 .navbar.top-jumbotron .show .nav-link {

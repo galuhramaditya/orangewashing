@@ -2,7 +2,7 @@
   <div class="jumbotron text-center">
     <div class="container">
       <h1 class="title text-xxl">{{ caption }}</h1>
-      <button class="btn btn-secondary">{{ button }}</button>
+      <button class="btn btn-outline-secondary">{{ button }}</button>
     </div>
   </div>
 </template>
@@ -36,10 +36,8 @@ export default {
 }
 
 .btn {
-  padding: 1% 5%;
+  padding: 1% 4%;
   border-radius: 20px;
-  border: solid 2px $primary;
-  background-color: transparent;
 }
 
 @media ($md-min) {

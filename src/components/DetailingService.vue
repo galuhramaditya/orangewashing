@@ -1,7 +1,7 @@
 <template>
-  <div class="row text-left">
-    <div class="head text-xl">{{ head }}</div>
-    <div class="body text-sm">{{ body }}</div>
+  <div class="row">
+    <div class="head text-navy text-xl">{{ head }}</div>
+    <div class="body text-darkgrey text-sm">{{ body }}</div>
   </div>
 </template>
 
@@ -23,13 +23,11 @@ export default {
   font-family: Georgia;
   font-weight: bold;
   line-height: 1.28;
-  color: $color-3;
 }
 
 .body {
   font-family: Helvetica;
-  line-height: 1.63;
-  color: $color-1;
+  margin: 4% 0;
 }
 
 @media ($sm-max) {
