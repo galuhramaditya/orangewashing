@@ -8,7 +8,7 @@
             <img :src="require('@/assets/images/' + image)" alt="404">
           </div>
           <div class="col-md-6 order-md-first left">
-            <div class="title">{{ title }}</div>
+            <div class="title text-xxl">{{ title }}</div>
             <div class="subtitle">{{ subtitle }}</div>
             <router-link to="/" class="btn btn-secondary">{{ button }}</router-link>
           </div>
@@ -80,7 +80,6 @@ $(document).ready(function() {
   line-height: 1.18;
   letter-spacing: normal;
   color: $primary;
-  font-size: 200%;
 }
 
 .container-fluid .subtitle {
@@ -101,13 +100,7 @@ $(document).ready(function() {
   background-color: $color-4;
 }
 
-@media screen and (min-width: 768px) {
-  .container-fluid .title {
-    font-size: 50px;
-  }
-}
-
-@media screen and (max-width: 767px) {
+@media ($sm-max) {
   .container-fluid .row {
     text-align: center;
   }

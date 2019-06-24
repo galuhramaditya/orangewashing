@@ -94,7 +94,7 @@ export default {
   text-align: left;
 }
 
-@media screen and (min-width: 576px) {
+@media ($sm-min) {
   .footer .head {
     margin-bottom: 10%;
   }

@@ -1,7 +1,7 @@
 <template>
   <div class="jumbotron">
     <div class="container">
-      <h1 class="title">{{ caption }}</h1>
+      <h1 class="title text-xxl">{{ caption }}</h1>
       <button class="btn btn-secondary">{{ button }}</button>
     </div>
   </div>
@@ -34,13 +34,7 @@ export default {
   padding-bottom: 3%;
   font-family: Montserrat;
   font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.18;
-  letter-spacing: normal;
-  text-align: center;
   color: $primary;
-  font-size: 200%;
 }
 
 .btn {
@@ -50,14 +44,13 @@ export default {
   background-color: transparent;
 }
 
-@media screen and (min-width: 768px) {
+@media ($md-min) {
   .jumbotron {
     padding: 20% 0 10%;
   }
   .title {
     padding-left: 20%;
     padding-right: 20%;
-    font-size: 250%;
   }
 }
 </style>

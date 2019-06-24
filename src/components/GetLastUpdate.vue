@@ -131,7 +131,7 @@ export default {
   text-align: center;
 }
 
-@media screen and (max-width: 767px) {
+@media ($sm-max) {
   .card input {
     border-radius: 0px;
     margin-bottom: 5%;

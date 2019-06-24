@@ -1,7 +1,7 @@
 <template>
   <div class="row">
-    <div class="head">{{ head }}</div>
-    <div class="body">{{ body }}</div>
+    <div class="head text-xl">{{ head }}</div>
+    <div class="body text-sm">{{ body }}</div>
   </div>
 </template>
 
@@ -21,7 +21,6 @@ export default {
 <style lang="scss" scoped>
 .head {
   font-family: Georgia;
-  font-size: $title;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -33,7 +32,6 @@ export default {
 
 .body {
   font-family: Helvetica;
-  font-size: $subtitle;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;

@@ -53,7 +53,7 @@ export default {
 
 
 <style lang="scss" scoped>
-@media screen and (min-width: 576px) {
+@media ($sm-min) {
   .modal-dialog {
     max-width: 80%;
   }
@@ -63,7 +63,7 @@ export default {
   width: 300px;
 }
 
-@media screen and (max-width: 575px) {
+@media ($xs) {
   .image img {
     width: 80%;
   }

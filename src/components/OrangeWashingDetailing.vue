@@ -54,7 +54,7 @@ export default {
   box-shadow: 0 15px 29px 0 rgba(242, 110, 34, 0.35);
 }
 
-@media screen and (min-width: 768px) {
+@media ($md-min) {
   .button {
     text-align: left !important;
   }

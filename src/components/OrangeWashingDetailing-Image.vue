@@ -19,7 +19,7 @@ img {
   box-shadow: 0 47px 99px 0 #c5c9cb;
 }
 
-@media screen and (min-width: 768px) {
+@media ($md-min) {
   img {
     width: 90%;
   }

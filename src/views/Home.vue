@@ -91,13 +91,13 @@ $(document).ready(function() {
 </script>
 
 <style lang="scss" scoped>
-@media screen and (max-width: 767px) {
+@media ($sm-max) {
   .container [class*="widget-"] {
     padding-top: 10%;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media ($md-min) {
   .widget-top-right {
     padding-left: 5%;
   }

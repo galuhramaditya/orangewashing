@@ -9,5 +9,55 @@ $color-7: #0b314b;
 $color-8: #abadae;
 $color-9: #707070;
 
+$xs: "(max-width: 575px)";
+$sm: "(min-width: 576px) and (max-width: 767px)";
+$md: "(min-width: 768px) and (max-width: 991px)";
+$lg: "(min-width: 992px) and (max-width: 1199px)";
+$xl: "(min-width: 1200px)";
+
+$sm-min: "(min-width: 576px)";
+$md-min: "(min-width: 768px)";
+$lg-min: "(min-width: 992px)";
+$xl-min: "(min-width: 1200px)";
+
+$xs-max: "(max-width: 575px)";
+$sm-max: "(max-width: 767px)";
+$md-max: "(max-width: 991px)";
+$lg-max: "(max-width: 1199px)";
+
+$subtitle: 15px;
 $title: 32px;
-$subtitle: 14px;
+
+$text-media: xxs xs sm md lg xl xxl;
+$text-size: 12 14 17 20 25 32 40;
+$text-decrease-md: 1 2 3 4 5 6 7;
+$text-decrease-sm: 2 2 4 4 6 6 10;
+$text-decrease-xs: 3 3 4 6 9 9 15;
+
+@each $media in $text-media {
+  $i: index($text-media, $media);
+
+  @media ($lg-min) {
+    .text-#{$media} {
+      font-size: nth($text-size, $i) + px;
+    }
+  }
+
+  @media ($md) {
+    .text-#{$media} {
+      font-size: (nth($text-size, $i) - nth($text-decrease-md, $i)) + px;
+    }
+  }
+
+  @media ($sm) {
+    .text-#{$media} {
+      font-size: (nth($text-size, $i) - nth($text-decrease-sm, $i)) + px;
+    }
+  }
+
+  @media ($xs) {
+    .text-#{$media} {
+      font-size: (nth($text-size, $i) - nth($text-decrease-xs, $i)) + px;
+    }
+  }
+}
