@@ -4,7 +4,7 @@
       <tr>
         <td>
           <h1 class="title text-xxl">{{ caption }}</h1>
-          <button class="btn btn-outline-secondary">{{ button }}</button>
+          <button class="btn btn-outline-secondary rounded">{{ button }}</button>
         </td>
       </tr>
     </table>
@@ -49,7 +49,6 @@ export default {
 
 .btn {
   padding: 1% 4%;
-  border-radius: 20px;
 }
 
 @media #{$md-min} {

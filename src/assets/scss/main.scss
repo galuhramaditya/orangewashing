@@ -71,10 +71,23 @@ $text-decrease-xs: 3 3 5 6 9 9 15;
   box-shadow: 0 5px 15px 0 rgba(242, 110, 34, 0.35);
 }
 
+.btn-outline-primary,
+.btn-outline-primary:focus {
+  color: $color-4;
+  border-color: $color-4;
+  border-width: 2px;
+}
+
+.btn-outline-primary:hover {
+  background-color: transparent;
+  box-shadow: 0 5px 15px 0 rgba(242, 110, 34, 0.35);
+}
+
 .btn-outline-secondary,
 .btn-outline-secondary:focus {
   color: $primary;
   border-color: $primary;
+  border-width: 2px;
 }
 
 .btn-outline-secondary:hover {
@@ -127,4 +140,8 @@ $text-decrease-xs: 3 3 5 6 9 9 15;
   border-radius: 13px;
   border-color: transparent;
   box-shadow: 0 17px 16px 0 rgba(235, 241, 245, 0.55);
+}
+
+.rounded {
+  border-radius: 20px !important;
 }

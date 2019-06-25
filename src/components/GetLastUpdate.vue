@@ -28,7 +28,7 @@
         </div>
       </div>
     </div>
-    <Modal/>
+    <Modal class="thankSubscribe-modal"/>
   </div>
 </template>
 

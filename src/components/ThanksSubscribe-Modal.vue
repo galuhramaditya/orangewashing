@@ -28,7 +28,11 @@
           </div>
           <div class="row done">
             <div class="col-12">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ button }}</button>
+              <button
+                type="button"
+                class="btn btn-outline-primary rounded"
+                data-dismiss="modal"
+              >{{ button }}</button>
             </div>
           </div>
         </div>
@@ -52,6 +56,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.modal {
+  padding: 0 !important;
+}
+
 @media #{$sm-min} {
   .modal-dialog {
     max-width: 80%;
@@ -69,7 +77,7 @@ export default {
 }
 
 .title {
-  margin-top: 3%;
+  margin: 40px 0 0;
   font-family: Georgia;
   font-weight: bold;
   line-height: 1.18;
@@ -83,7 +91,7 @@ export default {
 }
 
 .info {
-  margin: 2% 0;
+  margin: 20px 0;
   font-family: Helvetica;
   color: $color-1;
 }
@@ -93,11 +101,6 @@ export default {
 }
 
 .done .btn {
-  padding: 1% 5%;
-  border-radius: 20px;
-  border: solid 2px $color-4;
-  color: $color-4;
-
-  background-color: transparent;
+  padding: 1% 40px;
 }
 </style>
