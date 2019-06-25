@@ -2,18 +2,34 @@
   <div class="page">
     <navbar/>
     <div class="container-fluid">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 right">
-            <img :src="require('@/assets/images/' + image)" alt="404">
-          </div>
-          <div class="col-md-6 order-md-first left text-white">
-            <div class="title text-xxl text-xxl">{{ title }}</div>
-            <div class="subtitle text-md">{{ subtitle }}</div>
-            <router-link to="/" class="btn btn-primary btn-lg">{{ button }}</router-link>
-          </div>
-        </div>
-      </div>
+      <table class="container align-middle">
+        <tr>
+          <td>
+            <div class="row">
+              <div class="col-md-6 right">
+                <table>
+                  <tr>
+                    <td>
+                      <img :src="require('@/assets/images/' + image)" alt="404">
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="col-md-6 order-md-first left text-white">
+                <table>
+                  <tr>
+                    <td>
+                      <div class="title text-xxl text-xxl">{{ title }}</div>
+                      <div class="subtitle text-md">{{ subtitle }}</div>
+                      <router-link to="/" class="btn btn-primary btn-lg">{{ button }}</router-link>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
     </div>
   </div>
 </template>
@@ -34,41 +50,39 @@ export default {
     };
   }
 };
-
-$(document).ready(function() {
-  var blur = true;
-  $(".navbar.top-jumbotron button").click(function() {
-    blur = !blur;
-    if (!blur) {
-      $(".container-fluid").addClass("blur");
-    } else {
-      $(".container-fluid").removeClass("blur");
-    }
-  });
-});
 </script>
 
 <style lang="scss" scoped>
+.page {
+  height: 100%;
+}
+
 .container-fluid {
   background-color: $color-7;
   text-align: left !important;
-  padding-top: 13%;
-  padding-bottom: 10%;
   height: 100%;
   border-radius: 0;
+  padding: 10% 0;
   transition: 0.3s;
+}
+
+table {
+  height: 100%;
+  width: 100%;
+}
+
+.container .row {
+  height: 100%;
 }
 
 .container-fluid img {
   width: 100%;
 }
 
-.container-fluid .left {
-  padding-top: 5%;
-}
-
-.container-fluid.blur {
-  filter: blur(5px);
+@media #{$md-min} {
+  .container-fluid .left {
+    padding-top: 5%;
+  }
 }
 
 .container-fluid .title {
@@ -82,13 +96,9 @@ $(document).ready(function() {
   margin: 5% 0;
 }
 
-@media ($sm-max) {
+@media #{$sm-max} {
   .container-fluid .row {
     text-align: center;
-  }
-
-  .container-fluid .btn {
-    margin: 8% 0;
   }
 
   .container-fluid img {
@@ -97,7 +107,7 @@ $(document).ready(function() {
   }
 
   .container-fluid .title {
-    padding-bottom: 2%;
+    padding: 5% 0;
   }
 }
 </style>

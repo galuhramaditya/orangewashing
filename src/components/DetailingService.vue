@@ -30,8 +30,8 @@ export default {
   margin: 4% 0;
 }
 
-@media ($sm-max) {
-  .row {
+@media #{$sm-max} {
+  .body {
     text-align: justify !important;
   }
 }

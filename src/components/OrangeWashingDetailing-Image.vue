@@ -10,7 +10,6 @@ export default {
 };
 </script>
 
-
 <style lang="scss" scoped>
 img {
   width: 100%;
@@ -19,7 +18,7 @@ img {
   box-shadow: 0 47px 99px 0 #c5c9cb;
 }
 
-@media ($md-min) {
+@media #{$md-min} {
   img {
     width: 90%;
   }

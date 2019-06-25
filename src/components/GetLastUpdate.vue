@@ -107,7 +107,7 @@ export default {
   text-align: center;
 }
 
-@media ($sm-max) {
+@media #{$sm-max} {
   .card input {
     border-radius: 0px;
     margin-bottom: 5%;

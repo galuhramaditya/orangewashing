@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-md navbar-dark top-jumbotron">
+  <nav class="navbar navbar-expand-md navbar-light bg-light top-jumbotron">
     <router-link class="navbar-brand" to="/">
       <img :src="require('@/assets/images/' + logo)">
     </router-link>
@@ -53,7 +53,6 @@ export default {
 };
 </script>
 
-
 <style lang="scss" scoped>
 .navbar {
   position: fixed !important;
@@ -67,52 +66,43 @@ export default {
   text-align: center;
 }
 
-.navbar.top-jumbotron {
-  box-shadow: 0px 0px;
-  position: absolute !important;
-  padding: 5%;
+@media #{$md-min} {
+  .top-jumbotron {
+    box-shadow: 0px 0px;
+    position: absolute !important;
+    padding: 5%;
+    background-color: transparent !important;
+  }
+
+  .top-jumbotron .navbar-nav {
+    margin-left: 5%;
+    width: 100%;
+  }
+
+  .top-jumbotron .navbar-nav .nav-item {
+    margin: 0 3%;
+    text-shadow: 0 1px 10px black;
+  }
+
+  .top-jumbotron .navbar-nav .nav-item:hover {
+    text-shadow: 0 1px 5px black;
+  }
+
+  .top-jumbotron .navbar-nav .nav-link {
+    color: $primary;
+    padding: 0;
+  }
 }
 
-.navbar.top-jumbotron .navbar-nav {
-  width: 100%;
-}
-
-.navbar.top-jumbotron .nav-item {
-  margin: 0 3%;
-}
-.navbar.top-jumbotron .nav-link {
-  font-family: Montserrat;
-  text-shadow: 0px 1px 5px $color-5;
-  font-weight: 600;
-  opacity: 0.75;
-  transition: 0.3s;
-  color: $primary !important;
-}
-
-.navbar.top-jumbotron .active {
-  opacity: 1;
-  font-weight: 900;
-}
-
-.navbar.top-jumbotron .navbar-brand {
-  margin-right: 5%;
-}
-
-.navbar.top-jumbotron button.collapsed {
-  box-shadow: 0px 0px 1px 1px $color-5;
-}
-
-.navbar.top-jumbotron button {
-  box-shadow: 0px 0px 1px 5px $color-5;
-}
-
-.navbar.top-jumbotron .show .nav-link {
-  text-shadow: 3px 3px 3px $color-5;
-}
-
-@media ($sm-max) {
+@media #{$sm} {
   img {
     width: 75%;
+  }
+}
+
+@media #{$xs} {
+  img {
+    width: 50%;
   }
 }
 </style>

@@ -1,9 +1,13 @@
 <template>
   <div class="jumbotron text-center">
-    <div class="container">
-      <h1 class="title text-xxl">{{ caption }}</h1>
-      <button class="btn btn-outline-secondary">{{ button }}</button>
-    </div>
+    <table class="container">
+      <tr>
+        <td>
+          <h1 class="title text-xxl">{{ caption }}</h1>
+          <button class="btn btn-outline-secondary">{{ button }}</button>
+        </td>
+      </tr>
+    </table>
   </div>
 </template>
 
@@ -21,11 +25,19 @@ export default {
 
 <style lang="scss" scoped>
 .jumbotron {
-  padding: 35% 0 25%;
+  padding-top: 100px;
+  vertical-align: middle;
+  height: 500px;
   background: url(../assets/images/jumbotron.png);
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   border-radius: 0;
   transition: 0.3s;
+}
+
+.container {
+  height: 100%;
 }
 
 .title {
@@ -40,9 +52,9 @@ export default {
   border-radius: 20px;
 }
 
-@media ($md-min) {
+@media #{$md-min} {
   .jumbotron {
-    padding: 20% 0 10%;
+    height: 700px;
   }
   .title {
     padding-left: 20%;

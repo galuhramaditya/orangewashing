@@ -51,9 +51,8 @@ export default {
 };
 </script>
 
-
 <style lang="scss" scoped>
-@media ($sm-min) {
+@media #{$sm-min} {
   .modal-dialog {
     max-width: 80%;
   }
@@ -63,7 +62,7 @@ export default {
   width: 300px;
 }
 
-@media ($xs) {
+@media #{$xs} {
   .image img {
     width: 80%;
   }
@@ -102,4 +101,3 @@ export default {
   background-color: transparent;
 }
 </style>
-

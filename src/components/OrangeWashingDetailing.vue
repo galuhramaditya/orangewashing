@@ -3,7 +3,7 @@
     <div class="head text-navy text-xl">{{ head }}</div>
     <div class="body text-darkgrey text-sm">{{ body }}</div>
     <div class="button text-center">
-      <button class="btn btn-primary">{{button}}</button>
+      <button class="btn btn-primary">{{ button }}</button>
     </div>
   </div>
 </template>
@@ -21,7 +21,6 @@ export default {
 };
 </script>
 
-
 <style lang="scss" scoped>
 .head {
   font-family: Georgia;
@@ -34,13 +33,13 @@ export default {
   margin: 4% 0;
 }
 
-@media ($sm-max) {
-  .row {
+@media #{$sm-max} {
+  .body {
     text-align: justify !important;
   }
 }
 
-@media ($md-min) {
+@media #{$md-min} {
   .button {
     text-align: left !important;
   }

@@ -2,16 +2,16 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 text-center">
-        <div class="head text-xl text-navy">{{ head }}</div>
+        <div class="title text-xl text-navy">{{ head }}</div>
       </div>
     </div>
     <div class="row">
       <div class="col-12 text-center">
-        <div class="body text-sm text-grey">{{ body }}</div>
+        <div class="subtitle text-sm text-grey">{{ body }}</div>
       </div>
     </div>
     <div class="row">
-      <div class="col-6 col-md-4 col-card" v-for="card in cards">
+      <div class="col-sm-6 col-12 col-md-4 col-card" v-for="card in cards">
         <div class="card">
           <img
             class="card-img-top"
@@ -80,15 +80,21 @@ export default {
 
 
 <style lang="scss" scoped>
-.head {
+.title {
   font-family: "Montserrat";
   font-weight: bold;
   line-height: 1.28;
 }
 
-.body {
+.subtitle {
   padding: 0 25% 5%;
   font-family: Helvetica;
+}
+
+@media #{$sm-max} {
+  .subtitle {
+    padding: 0 0 5%;
+  }
 }
 
 .col-card {

@@ -1,11 +1,11 @@
 <template>
   <div class="footer container-fluid bg-darknavy text-white">
     <div class="row content">
-      <div class="col-sm-4">
+      <div class="col-sm-4 left">
         <div class="head text-sm">{{ left.head }}</div>
-        <div class="body text-xs">{{left.body}}</div>
+        <div class="body text-xs">{{ left.body }}</div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-4 center">
         <div class="head text-sm">{{ center.head }}</div>
         <div class="body text-xs">
           <ul>
@@ -13,7 +13,7 @@
           </ul>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-4 right">
         <div class="head text-sm">{{ right.head }}</div>
         <div class="body text-xxs">
           <ul>
@@ -67,69 +67,71 @@ export default {
 };
 </script>
 
-
 <style lang="scss" scoped>
 .footer {
   border: solid 1px $color-9;
 }
 
-.footer .content {
+.content {
   padding: 5% 10% 1%;
 }
 
-.footer .content [class*="col-"] {
+.content [class*="col-"] {
   padding: 5%;
 }
 
-.footer .head {
+.head {
   font-family: Helvetica;
   font-weight: bold;
   margin-bottom: 3%;
 }
 
-@media ($sm-min) {
-  .footer .head {
-    margin-bottom: 7%;
-  }
-}
-
-.footer .body {
+.body {
   font-family: Helvetica;
   line-height: 1.21;
 }
 
-.footer .body ul {
+.body ul {
   display: contents;
   list-style: none;
 }
 
-.footer .body ul li {
+.body ul li {
   margin-bottom: 10px;
 }
 
-.footer .body ul li .fa {
+.body ul li .fa {
   margin-right: 15px;
 }
 
-.footer .body ul li .map .fa {
+.body ul li .map .fa {
   position: absolute;
 }
 
-.footer .body ul li .map div {
+.body ul li .map div {
   margin-left: 50px;
 }
 
-@media ($sm-max) {
-  .footer .body ul li .map div {
-    margin-left: 40px;
-  }
-}
-
-.footer .copyright {
+.copyright {
   opacity: 0.6;
   font-family: Muli;
   margin-bottom: 3%;
   color: $color-8;
 }
-</style>
 
+@media #{$sm-min} {
+  .head {
+    margin-bottom: 7%;
+  }
+}
+
+@media #{$sm-max} {
+  .body ul li .map div {
+    margin-left: 40px;
+  }
+
+  .copyright {
+    padding: 7% 7% 0;
+  }
+}
+</style>
